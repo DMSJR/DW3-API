@@ -1,0 +1,39 @@
+### Teste de API - Obter todas as salas de aula
+GET http://localhost:40000/getall HTTP/1.1
+content-type: application/json
+
+###
+
+### Teste de API - Obter uma sala de aula por ID
+GET http://localhost:40000/getbyid/1 HTTP/1.1
+content-type: application/json
+
+###
+
+### Teste de API - Inserir uma nova sala de aula
+POST http://localhost:40000/insert HTTP/1.1
+content-type: application/json
+
+{
+    "descricao": "Sala 103",
+    "localizacao": "Bloco C",
+    "capacidade": 30
+}
+
+###
+
+### Teste de API - Atualizar uma sala de aula
+PUT http://localhost:40000/update/1 HTTP/1.1
+content-type: application/json
+
+{
+    "descricao": "Sala 101 - Atualizada",
+    "localizacao": "Bloco A",
+    "capacidade": 35
+}
+
+###
+
+### Teste de API - Deletar uma sala de aula (marcar como removida)
+PUT  http://localhost:40000/delete/1 HTTP/1.1
+content-type: application/json
